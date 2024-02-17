@@ -21,6 +21,9 @@
 		380BFDCC2B81059C0066425D /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380BFDCB2B81059C0066425D /* ApiError.swift */; };
 		380BFDCE2B81070A0066425D /* ApiDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380BFDCD2B81070A0066425D /* ApiDataSource.swift */; };
 		380BFDD02B8108BD0066425D /* ApiDataSourceImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380BFDCF2B8108BD0066425D /* ApiDataSourceImplementation.swift */; };
+		380BFDD22B810EB40066425D /* CurrencyEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380BFDD12B810EB40066425D /* CurrencyEntity.swift */; };
+		380BFDD42B8112070066425D /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380BFDD32B8112070066425D /* Repository.swift */; };
+		380BFDD62B8112960066425D /* RepositoryImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380BFDD52B8112960066425D /* RepositoryImplementation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +61,9 @@
 		380BFDCB2B81059C0066425D /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		380BFDCD2B81070A0066425D /* ApiDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiDataSource.swift; sourceTree = "<group>"; };
 		380BFDCF2B8108BD0066425D /* ApiDataSourceImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiDataSourceImplementation.swift; sourceTree = "<group>"; };
+		380BFDD12B810EB40066425D /* CurrencyEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyEntity.swift; sourceTree = "<group>"; };
+		380BFDD32B8112070066425D /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		380BFDD52B8112960066425D /* RepositoryImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryImplementation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +187,7 @@
 		380BFDB82B80F69B0066425D /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				380BFDD12B810EB40066425D /* CurrencyEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -188,6 +195,7 @@
 		380BFDB92B80F6A50066425D /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				380BFDD32B8112070066425D /* Repository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -239,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				380BFDCF2B8108BD0066425D /* ApiDataSourceImplementation.swift */,
+				380BFDD52B8112960066425D /* RepositoryImplementation.swift */,
 				380BFDC92B8104C40066425D /* RequestBuilderImplementation.swift */,
 			);
 			path = Repository;
@@ -399,14 +408,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				380BFDCC2B81059C0066425D /* ApiError.swift in Sources */,
+				380BFDD22B810EB40066425D /* CurrencyEntity.swift in Sources */,
 				380BFDC82B8102FF0066425D /* RequestBuilder.swift in Sources */,
 				380BFDCA2B8104C40066425D /* RequestBuilderImplementation.swift in Sources */,
 				380BFDCE2B81070A0066425D /* ApiDataSource.swift in Sources */,
+				380BFDD42B8112070066425D /* Repository.swift in Sources */,
 				380BFDC42B8100880066425D /* Currency.swift in Sources */,
 				380BFDD02B8108BD0066425D /* ApiDataSourceImplementation.swift in Sources */,
 				380BFD8D2B80F2AF0066425D /* OverviewView.swift in Sources */,
 				380BFDC62B8101CE0066425D /* CurrenciesWrapper.swift in Sources */,
 				380BFD8B2B80F2AF0066425D /* CoinsApp.swift in Sources */,
+				380BFDD62B8112960066425D /* RepositoryImplementation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,6 +9,7 @@ class ApiDataSourceImplementation: ApiDataSource {
     private enum Constants {
         static let apiBaseUrl = "https://api.coincap.io/v2"
         static let assetsUrlPath = "/assets"
+        static let limitQueryParameterValue = "10"
         static let acceptEncodingHeaderParameterValue = "gzip"
         static let requestTimeout = 10.0
     }
@@ -21,11 +22,11 @@ class ApiDataSourceImplementation: ApiDataSource {
             .withTimeout(Constants.requestTimeout)
     }
     
-    func getCurrencies(count: Int) async throws -> [Currency] {
+    func getCurrencies() async throws -> [Currency] {
         let currenciesWrapper: CurrenciesWrapper = try await requestBuilder
             .withType(.get)
             .withUrl(Constants.apiBaseUrl + Constants.assetsUrlPath)
-            .withQueryParameter(key: .limit, value: String(count))
+            .withQueryParameter(key: .limit, value: Constants.limitQueryParameterValue)
             .request()
         return currenciesWrapper.data
     }
