@@ -9,7 +9,7 @@ protocol GetCurrenciesUseCase {
     func getCurrencies() async throws -> [CurrencyEntity]
 }
 
-class GetCurrenciesUseCaseUseCaseImplementation: GetCurrenciesUseCase {
+class GetCurrenciesUseCaseImplementation: GetCurrenciesUseCase {
     private let repository: Repository
     
     init(repository: Repository) {

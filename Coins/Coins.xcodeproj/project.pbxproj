@@ -25,6 +25,10 @@
 		380BFDD42B8112070066425D /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380BFDD32B8112070066425D /* Repository.swift */; };
 		380BFDD62B8112960066425D /* RepositoryImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380BFDD52B8112960066425D /* RepositoryImplementation.swift */; };
 		380BFDD82B816A660066425D /* GetCurrenciesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380BFDD72B816A660066425D /* GetCurrenciesUseCase.swift */; };
+		380BFDDA2B816C910066425D /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380BFDD92B816C910066425D /* Container.swift */; };
+		380BFDDC2B816CCA0066425D /* Container+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380BFDDB2B816CCA0066425D /* Container+Data.swift */; };
+		380BFDDE2B816CF90066425D /* Container+Domain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380BFDDD2B816CF90066425D /* Container+Domain.swift */; };
+		380BFDE02B816D7D0066425D /* Resolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380BFDDF2B816D7D0066425D /* Resolver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +70,10 @@
 		380BFDD32B8112070066425D /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		380BFDD52B8112960066425D /* RepositoryImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryImplementation.swift; sourceTree = "<group>"; };
 		380BFDD72B816A660066425D /* GetCurrenciesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCurrenciesUseCase.swift; sourceTree = "<group>"; };
+		380BFDD92B816C910066425D /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
+		380BFDDB2B816CCA0066425D /* Container+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Container+Data.swift"; sourceTree = "<group>"; };
+		380BFDDD2B816CF90066425D /* Container+Domain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Container+Domain.swift"; sourceTree = "<group>"; };
+		380BFDDF2B816D7D0066425D /* Resolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resolver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,6 +276,10 @@
 		380BFDC12B80F74D0066425D /* DI */ = {
 			isa = PBXGroup;
 			children = (
+				380BFDD92B816C910066425D /* Container.swift */,
+				380BFDDB2B816CCA0066425D /* Container+Data.swift */,
+				380BFDDD2B816CF90066425D /* Container+Domain.swift */,
+				380BFDDF2B816D7D0066425D /* Resolver.swift */,
 			);
 			path = DI;
 			sourceTree = "<group>";
@@ -417,10 +429,14 @@
 				380BFDCE2B81070A0066425D /* ApiDataSource.swift in Sources */,
 				380BFDD82B816A660066425D /* GetCurrenciesUseCase.swift in Sources */,
 				380BFDD42B8112070066425D /* Repository.swift in Sources */,
+				380BFDDE2B816CF90066425D /* Container+Domain.swift in Sources */,
 				380BFDC42B8100880066425D /* Currency.swift in Sources */,
 				380BFDD02B8108BD0066425D /* ApiDataSourceImplementation.swift in Sources */,
 				380BFD8D2B80F2AF0066425D /* OverviewView.swift in Sources */,
 				380BFDC62B8101CE0066425D /* CurrenciesWrapper.swift in Sources */,
+				380BFDDA2B816C910066425D /* Container.swift in Sources */,
+				380BFDE02B816D7D0066425D /* Resolver.swift in Sources */,
+				380BFDDC2B816CCA0066425D /* Container+Data.swift in Sources */,
 				380BFD8B2B80F2AF0066425D /* CoinsApp.swift in Sources */,
 				380BFDD62B8112960066425D /* RepositoryImplementation.swift in Sources */,
 			);
