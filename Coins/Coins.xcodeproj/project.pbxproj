@@ -19,6 +19,8 @@
 		380BFDC82B8102FF0066425D /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380BFDC72B8102FF0066425D /* RequestBuilder.swift */; };
 		380BFDCA2B8104C40066425D /* RequestBuilderImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380BFDC92B8104C40066425D /* RequestBuilderImplementation.swift */; };
 		380BFDCC2B81059C0066425D /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380BFDCB2B81059C0066425D /* ApiError.swift */; };
+		380BFDCE2B81070A0066425D /* ApiDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380BFDCD2B81070A0066425D /* ApiDataSource.swift */; };
+		380BFDD02B8108BD0066425D /* ApiDataSourceImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380BFDCF2B8108BD0066425D /* ApiDataSourceImplementation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		380BFDC72B8102FF0066425D /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
 		380BFDC92B8104C40066425D /* RequestBuilderImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilderImplementation.swift; sourceTree = "<group>"; };
 		380BFDCB2B81059C0066425D /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		380BFDCD2B81070A0066425D /* ApiDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiDataSource.swift; sourceTree = "<group>"; };
+		380BFDCF2B8108BD0066425D /* ApiDataSourceImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiDataSourceImplementation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				380BFDBE2B80F6FA0066425D /* Model */,
+				380BFDCD2B81070A0066425D /* ApiDataSource.swift */,
 				380BFDC72B8102FF0066425D /* RequestBuilder.swift */,
 			);
 			path = Api;
@@ -233,6 +238,7 @@
 		380BFDBF2B80F70D0066425D /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				380BFDCF2B8108BD0066425D /* ApiDataSourceImplementation.swift */,
 				380BFDC92B8104C40066425D /* RequestBuilderImplementation.swift */,
 			);
 			path = Repository;
@@ -395,7 +401,9 @@
 				380BFDCC2B81059C0066425D /* ApiError.swift in Sources */,
 				380BFDC82B8102FF0066425D /* RequestBuilder.swift in Sources */,
 				380BFDCA2B8104C40066425D /* RequestBuilderImplementation.swift in Sources */,
+				380BFDCE2B81070A0066425D /* ApiDataSource.swift in Sources */,
 				380BFDC42B8100880066425D /* Currency.swift in Sources */,
+				380BFDD02B8108BD0066425D /* ApiDataSourceImplementation.swift in Sources */,
 				380BFD8D2B80F2AF0066425D /* OverviewView.swift in Sources */,
 				380BFDC62B8101CE0066425D /* CurrenciesWrapper.swift in Sources */,
 				380BFD8B2B80F2AF0066425D /* CoinsApp.swift in Sources */,
