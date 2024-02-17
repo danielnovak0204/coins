@@ -16,6 +16,9 @@
 		380BFDA82B80F2B00066425D /* CoinsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380BFDA72B80F2B00066425D /* CoinsUITestsLaunchTests.swift */; };
 		380BFDC42B8100880066425D /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380BFDC32B8100880066425D /* Currency.swift */; };
 		380BFDC62B8101CE0066425D /* CurrenciesWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380BFDC52B8101CE0066425D /* CurrenciesWrapper.swift */; };
+		380BFDC82B8102FF0066425D /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380BFDC72B8102FF0066425D /* RequestBuilder.swift */; };
+		380BFDCA2B8104C40066425D /* RequestBuilderImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380BFDC92B8104C40066425D /* RequestBuilderImplementation.swift */; };
+		380BFDCC2B81059C0066425D /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380BFDCB2B81059C0066425D /* ApiError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,9 @@
 		380BFDA72B80F2B00066425D /* CoinsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		380BFDC32B8100880066425D /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		380BFDC52B8101CE0066425D /* CurrenciesWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesWrapper.swift; sourceTree = "<group>"; };
+		380BFDC72B8102FF0066425D /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
+		380BFDC92B8104C40066425D /* RequestBuilderImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilderImplementation.swift; sourceTree = "<group>"; };
+		380BFDCB2B81059C0066425D /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				380BFDBE2B80F6FA0066425D /* Model */,
+				380BFDC72B8102FF0066425D /* RequestBuilder.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -226,6 +233,7 @@
 		380BFDBF2B80F70D0066425D /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				380BFDC92B8104C40066425D /* RequestBuilderImplementation.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -249,6 +257,7 @@
 		380BFDC22B80F7540066425D /* Error */ = {
 			isa = PBXGroup;
 			children = (
+				380BFDCB2B81059C0066425D /* ApiError.swift */,
 			);
 			path = Error;
 			sourceTree = "<group>";
@@ -383,6 +392,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				380BFDCC2B81059C0066425D /* ApiError.swift in Sources */,
+				380BFDC82B8102FF0066425D /* RequestBuilder.swift in Sources */,
+				380BFDCA2B8104C40066425D /* RequestBuilderImplementation.swift in Sources */,
 				380BFDC42B8100880066425D /* Currency.swift in Sources */,
 				380BFD8D2B80F2AF0066425D /* OverviewView.swift in Sources */,
 				380BFDC62B8101CE0066425D /* CurrenciesWrapper.swift in Sources */,
