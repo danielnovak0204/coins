@@ -14,6 +14,8 @@
 		380BFD9C2B80F2B00066425D /* CoinsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380BFD9B2B80F2B00066425D /* CoinsTests.swift */; };
 		380BFDA62B80F2B00066425D /* CoinsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380BFDA52B80F2B00066425D /* CoinsUITests.swift */; };
 		380BFDA82B80F2B00066425D /* CoinsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380BFDA72B80F2B00066425D /* CoinsUITestsLaunchTests.swift */; };
+		380BFDC42B8100880066425D /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380BFDC32B8100880066425D /* Currency.swift */; };
+		380BFDC62B8101CE0066425D /* CurrenciesWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380BFDC52B8101CE0066425D /* CurrenciesWrapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		380BFDA12B80F2B00066425D /* CoinsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoinsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		380BFDA52B80F2B00066425D /* CoinsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsUITests.swift; sourceTree = "<group>"; };
 		380BFDA72B80F2B00066425D /* CoinsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		380BFDC32B8100880066425D /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		380BFDC52B8101CE0066425D /* CurrenciesWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesWrapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +217,8 @@
 		380BFDBE2B80F6FA0066425D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				380BFDC52B8101CE0066425D /* CurrenciesWrapper.swift */,
+				380BFDC32B8100880066425D /* Currency.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -377,7 +383,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				380BFDC42B8100880066425D /* Currency.swift in Sources */,
 				380BFD8D2B80F2AF0066425D /* OverviewView.swift in Sources */,
+				380BFDC62B8101CE0066425D /* CurrenciesWrapper.swift in Sources */,
 				380BFD8B2B80F2AF0066425D /* CoinsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
