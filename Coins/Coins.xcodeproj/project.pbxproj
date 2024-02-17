@@ -24,6 +24,7 @@
 		380BFDD22B810EB40066425D /* CurrencyEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380BFDD12B810EB40066425D /* CurrencyEntity.swift */; };
 		380BFDD42B8112070066425D /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380BFDD32B8112070066425D /* Repository.swift */; };
 		380BFDD62B8112960066425D /* RepositoryImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380BFDD52B8112960066425D /* RepositoryImplementation.swift */; };
+		380BFDD82B816A660066425D /* GetCurrenciesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380BFDD72B816A660066425D /* GetCurrenciesUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		380BFDD12B810EB40066425D /* CurrencyEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyEntity.swift; sourceTree = "<group>"; };
 		380BFDD32B8112070066425D /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		380BFDD52B8112960066425D /* RepositoryImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryImplementation.swift; sourceTree = "<group>"; };
+		380BFDD72B816A660066425D /* GetCurrenciesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCurrenciesUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +205,7 @@
 		380BFDBA2B80F6B50066425D /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
+				380BFDD72B816A660066425D /* GetCurrenciesUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -412,6 +415,7 @@
 				380BFDC82B8102FF0066425D /* RequestBuilder.swift in Sources */,
 				380BFDCA2B8104C40066425D /* RequestBuilderImplementation.swift in Sources */,
 				380BFDCE2B81070A0066425D /* ApiDataSource.swift in Sources */,
+				380BFDD82B816A660066425D /* GetCurrenciesUseCase.swift in Sources */,
 				380BFDD42B8112070066425D /* Repository.swift in Sources */,
 				380BFDC42B8100880066425D /* Currency.swift in Sources */,
 				380BFDD02B8108BD0066425D /* ApiDataSourceImplementation.swift in Sources */,
