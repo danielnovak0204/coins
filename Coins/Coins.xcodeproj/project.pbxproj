@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		380A08A72B828F48007828C6 /* OverviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380A08A62B828F48007828C6 /* OverviewViewModel.swift */; };
+		380A08A92B82A589007828C6 /* OverviewViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380A08A82B82A589007828C6 /* OverviewViewModelTests.swift */; };
 		380BFD8B2B80F2AF0066425D /* CoinsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380BFD8A2B80F2AF0066425D /* CoinsApp.swift */; };
 		380BFD8D2B80F2AF0066425D /* OverviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380BFD8C2B80F2AF0066425D /* OverviewView.swift */; };
 		380BFD8F2B80F2B00066425D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 380BFD8E2B80F2B00066425D /* Assets.xcassets */; };
@@ -59,6 +61,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		380A08A62B828F48007828C6 /* OverviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewModel.swift; sourceTree = "<group>"; };
+		380A08A82B82A589007828C6 /* OverviewViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewModelTests.swift; sourceTree = "<group>"; };
 		380BFD872B80F2AF0066425D /* Coins.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coins.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		380BFD8A2B80F2AF0066425D /* CoinsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsApp.swift; sourceTree = "<group>"; };
 		380BFD8C2B80F2AF0066425D /* OverviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewView.swift; sourceTree = "<group>"; };
@@ -202,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				380BFD8C2B80F2AF0066425D /* OverviewView.swift */,
+				380A08A62B828F48007828C6 /* OverviewViewModel.swift */,
 			);
 			path = Overview;
 			sourceTree = "<group>";
@@ -340,6 +345,7 @@
 			children = (
 				380BFDF62B8179120066425D /* ApiDataSourceImplementationTests.swift */,
 				380BFDFA2B817AC60066425D /* GetCurrenciesUseCaseImplementationTests.swift */,
+				380A08A82B82A589007828C6 /* OverviewViewModelTests.swift */,
 				380BFDF82B817A210066425D /* RepositoryImplementationTests.swift */,
 				380BFD9B2B80F2B00066425D /* RequestBuilderImplementationTests.swift */,
 			);
@@ -496,6 +502,7 @@
 				380BFDDC2B816CCA0066425D /* Container+Data.swift in Sources */,
 				380BFD8B2B80F2AF0066425D /* CoinsApp.swift in Sources */,
 				380BFDD62B8112960066425D /* RepositoryImplementation.swift in Sources */,
+				380A08A72B828F48007828C6 /* OverviewViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,6 +512,7 @@
 			files = (
 				380BFDF92B817A210066425D /* RepositoryImplementationTests.swift in Sources */,
 				380BFDE92B8170330066425D /* MockResolver.swift in Sources */,
+				380A08A92B82A589007828C6 /* OverviewViewModelTests.swift in Sources */,
 				380BFD9C2B80F2B00066425D /* RequestBuilderImplementationTests.swift in Sources */,
 				380BFDE32B816E830066425D /* MockURLProtocol.swift in Sources */,
 				380BFDF72B8179120066425D /* ApiDataSourceImplementationTests.swift in Sources */,
