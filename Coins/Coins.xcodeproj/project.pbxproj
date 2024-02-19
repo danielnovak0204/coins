@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		380A08A72B828F48007828C6 /* OverviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380A08A62B828F48007828C6 /* OverviewViewModel.swift */; };
 		380A08A92B82A589007828C6 /* OverviewViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380A08A82B82A589007828C6 /* OverviewViewModelTests.swift */; };
+		380A08AB2B82AE20007828C6 /* CurrencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380A08AA2B82AE20007828C6 /* CurrencyView.swift */; };
+		380A08AD2B82AEA6007828C6 /* PreviewCurrencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380A08AC2B82AEA6007828C6 /* PreviewCurrencies.swift */; };
+		380A08AF2B82AF9E007828C6 /* PreviewOverviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380A08AE2B82AF9E007828C6 /* PreviewOverviewViewModel.swift */; };
+		380A08B12B82C679007828C6 /* CircleAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380A08B02B82C679007828C6 /* CircleAsyncImage.swift */; };
 		380BFD8B2B80F2AF0066425D /* CoinsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380BFD8A2B80F2AF0066425D /* CoinsApp.swift */; };
 		380BFD8D2B80F2AF0066425D /* OverviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380BFD8C2B80F2AF0066425D /* OverviewView.swift */; };
 		380BFD8F2B80F2B00066425D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 380BFD8E2B80F2B00066425D /* Assets.xcassets */; };
@@ -41,6 +45,12 @@
 		380BFDF72B8179120066425D /* ApiDataSourceImplementationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380BFDF62B8179120066425D /* ApiDataSourceImplementationTests.swift */; };
 		380BFDF92B817A210066425D /* RepositoryImplementationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380BFDF82B817A210066425D /* RepositoryImplementationTests.swift */; };
 		380BFDFB2B817AC60066425D /* GetCurrenciesUseCaseImplementationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380BFDFA2B817AC60066425D /* GetCurrenciesUseCaseImplementationTests.swift */; };
+		38E79E3F2B833E53004D00F2 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38E79E2D2B833E52004D00F2 /* Poppins-Regular.ttf */; };
+		38E79E462B833E53004D00F2 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38E79E342B833E53004D00F2 /* Poppins-Bold.ttf */; };
+		38E79E522B836570004D00F2 /* Font+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E79E512B836570004D00F2 /* Font+Extension.swift */; };
+		38E79E542B83A227004D00F2 /* RepositoryError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E79E532B83A227004D00F2 /* RepositoryError.swift */; };
+		38E79E562B83A295004D00F2 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E79E552B83A295004D00F2 /* AppError.swift */; };
+		38E79E592B83C2E2004D00F2 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E79E582B83C2E2004D00F2 /* Double+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +73,10 @@
 /* Begin PBXFileReference section */
 		380A08A62B828F48007828C6 /* OverviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewModel.swift; sourceTree = "<group>"; };
 		380A08A82B82A589007828C6 /* OverviewViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewModelTests.swift; sourceTree = "<group>"; };
+		380A08AA2B82AE20007828C6 /* CurrencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyView.swift; sourceTree = "<group>"; };
+		380A08AC2B82AEA6007828C6 /* PreviewCurrencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewCurrencies.swift; sourceTree = "<group>"; };
+		380A08AE2B82AF9E007828C6 /* PreviewOverviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewOverviewViewModel.swift; sourceTree = "<group>"; };
+		380A08B02B82C679007828C6 /* CircleAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleAsyncImage.swift; sourceTree = "<group>"; };
 		380BFD872B80F2AF0066425D /* Coins.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coins.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		380BFD8A2B80F2AF0066425D /* CoinsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsApp.swift; sourceTree = "<group>"; };
 		380BFD8C2B80F2AF0066425D /* OverviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewView.swift; sourceTree = "<group>"; };
@@ -98,6 +112,13 @@
 		380BFDF62B8179120066425D /* ApiDataSourceImplementationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiDataSourceImplementationTests.swift; sourceTree = "<group>"; };
 		380BFDF82B817A210066425D /* RepositoryImplementationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryImplementationTests.swift; sourceTree = "<group>"; };
 		380BFDFA2B817AC60066425D /* GetCurrenciesUseCaseImplementationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCurrenciesUseCaseImplementationTests.swift; sourceTree = "<group>"; };
+		38E79E2D2B833E52004D00F2 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		38E79E342B833E53004D00F2 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		38E79E502B8340B2004D00F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		38E79E512B836570004D00F2 /* Font+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extension.swift"; sourceTree = "<group>"; };
+		38E79E532B83A227004D00F2 /* RepositoryError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryError.swift; sourceTree = "<group>"; };
+		38E79E552B83A295004D00F2 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		38E79E582B83C2E2004D00F2 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +176,7 @@
 				380BFD902B80F2B00066425D /* Preview Content */,
 				380BFD8E2B80F2B00066425D /* Assets.xcassets */,
 				380BFD8A2B80F2AF0066425D /* CoinsApp.swift */,
+				38E79E502B8340B2004D00F2 /* Info.plist */,
 			);
 			path = Coins;
 			sourceTree = "<group>";
@@ -163,6 +185,8 @@
 			isa = PBXGroup;
 			children = (
 				380BFD912B80F2B00066425D /* Preview Assets.xcassets */,
+				380A08AC2B82AEA6007828C6 /* PreviewCurrencies.swift */,
+				380A08AE2B82AF9E007828C6 /* PreviewOverviewViewModel.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -170,9 +194,9 @@
 		380BFD9A2B80F2B00066425D /* CoinsTests */ = {
 			isa = PBXGroup;
 			children = (
-				380BFDF52B8174AD0066425D /* Tests */,
 				380BFDE12B816E680066425D /* Mock */,
 				380BFDEA2B8170E00066425D /* Resources */,
+				380BFDF52B8174AD0066425D /* Tests */,
 			);
 			path = CoinsTests;
 			sourceTree = "<group>";
@@ -198,6 +222,9 @@
 		380BFDB52B80F6260066425D /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				38E79E572B83C2B0004D00F2 /* Extension */,
+				38E79E2B2B833DFF004D00F2 /* Font */,
+				380A08B02B82C679007828C6 /* CircleAsyncImage.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -205,6 +232,7 @@
 		380BFDB62B80F62F0066425D /* Overview */ = {
 			isa = PBXGroup;
 			children = (
+				380A08AA2B82AE20007828C6 /* CurrencyView.swift */,
 				380BFD8C2B80F2AF0066425D /* OverviewView.swift */,
 				380A08A62B828F48007828C6 /* OverviewViewModel.swift */,
 			);
@@ -315,6 +343,8 @@
 			isa = PBXGroup;
 			children = (
 				380BFDCB2B81059C0066425D /* ApiError.swift */,
+				38E79E552B83A295004D00F2 /* AppError.swift */,
+				38E79E532B83A227004D00F2 /* RepositoryError.swift */,
 			);
 			path = Error;
 			sourceTree = "<group>";
@@ -350,6 +380,24 @@
 				380BFD9B2B80F2B00066425D /* RequestBuilderImplementationTests.swift */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		38E79E2B2B833DFF004D00F2 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				38E79E512B836570004D00F2 /* Font+Extension.swift */,
+				38E79E342B833E53004D00F2 /* Poppins-Bold.ttf */,
+				38E79E2D2B833E52004D00F2 /* Poppins-Regular.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		38E79E572B83C2B0004D00F2 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				38E79E582B83C2E2004D00F2 /* Double+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -457,7 +505,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				380BFD922B80F2B00066425D /* Preview Assets.xcassets in Resources */,
+				38E79E462B833E53004D00F2 /* Poppins-Bold.ttf in Resources */,
 				380BFD8F2B80F2B00066425D /* Assets.xcassets in Resources */,
+				38E79E3F2B833E53004D00F2 /* Poppins-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,20 +535,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				380A08B12B82C679007828C6 /* CircleAsyncImage.swift in Sources */,
 				380BFDCC2B81059C0066425D /* ApiError.swift in Sources */,
+				38E79E542B83A227004D00F2 /* RepositoryError.swift in Sources */,
 				380BFDD22B810EB40066425D /* CurrencyEntity.swift in Sources */,
+				38E79E592B83C2E2004D00F2 /* Double+Extension.swift in Sources */,
 				380BFDC82B8102FF0066425D /* RequestBuilder.swift in Sources */,
+				38E79E522B836570004D00F2 /* Font+Extension.swift in Sources */,
 				380BFDCA2B8104C40066425D /* RequestBuilderImplementation.swift in Sources */,
 				380BFDCE2B81070A0066425D /* ApiDataSource.swift in Sources */,
+				380A08AB2B82AE20007828C6 /* CurrencyView.swift in Sources */,
 				380BFDD82B816A660066425D /* GetCurrenciesUseCase.swift in Sources */,
 				380BFDD42B8112070066425D /* Repository.swift in Sources */,
 				380BFDDE2B816CF90066425D /* Container+Domain.swift in Sources */,
 				380BFDC42B8100880066425D /* Currency.swift in Sources */,
 				380BFDD02B8108BD0066425D /* ApiDataSourceImplementation.swift in Sources */,
+				380A08AF2B82AF9E007828C6 /* PreviewOverviewViewModel.swift in Sources */,
 				380BFD8D2B80F2AF0066425D /* OverviewView.swift in Sources */,
 				380BFDC62B8101CE0066425D /* CurrenciesWrapper.swift in Sources */,
+				38E79E562B83A295004D00F2 /* AppError.swift in Sources */,
 				380BFDDA2B816C910066425D /* Container.swift in Sources */,
 				380BFDE02B816D7D0066425D /* Resolver.swift in Sources */,
+				380A08AD2B82AEA6007828C6 /* PreviewCurrencies.swift in Sources */,
 				380BFDDC2B816CCA0066425D /* Container+Data.swift in Sources */,
 				380BFD8B2B80F2AF0066425D /* CoinsApp.swift in Sources */,
 				380BFDD62B8112960066425D /* RepositoryImplementation.swift in Sources */,
@@ -677,6 +735,7 @@
 				DEVELOPMENT_TEAM = 8VWM8F499A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Coins/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -706,6 +765,7 @@
 				DEVELOPMENT_TEAM = 8VWM8F499A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Coins/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

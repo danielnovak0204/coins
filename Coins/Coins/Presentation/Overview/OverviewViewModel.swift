@@ -32,8 +32,11 @@ class OverviewViewModel: OverviewViewModelProtocol {
         isLoading = true
         do {
             currencies = try await getCurrenciesUseCase.getCurrencies()
+        } catch let error as AppError {
+            errorMessage = error.message
+            isFailed = true
         } catch {
-            errorMessage = (error as? ApiError)?.message ?? error.localizedDescription
+            errorMessage = error.localizedDescription
             isFailed = true
         }
         isLoading = false

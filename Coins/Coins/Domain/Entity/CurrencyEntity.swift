@@ -10,6 +10,6 @@ struct CurrencyEntity: Identifiable {
     let iconUrl: String
     let name: String
     let symbol: String
-    let priceUsd: String
-    let changePercent24Hr: String
+    let priceUsd: Double
+    let changePercent24Hr: Double
 }

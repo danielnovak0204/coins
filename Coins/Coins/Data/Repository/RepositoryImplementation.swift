@@ -19,14 +19,18 @@ class RepositoryImplementation: Repository {
     
     func getCurrencies() async throws -> [CurrencyEntity] {
         let currencies = try await apiDataSource.getCurrencies()
-        return currencies.map { currency in
-            CurrencyEntity(
+        return try currencies.map { currency in
+            guard let priceUsd = Double(currency.priceUsd),
+                  let changePercent24Hr = Double(currency.changePercent24Hr) else {
+                throw RepositoryError.mapModel
+            }
+            return CurrencyEntity(
                 id: currency.id,
                 iconUrl: Constants.iconUrlPath + currency.symbol.lowercased() + Constants.iconUrlResourceType,
                 name: currency.name.uppercased(),
                 symbol: currency.symbol.uppercased(),
-                priceUsd: currency.priceUsd,
-                changePercent24Hr: currency.changePercent24Hr
+                priceUsd: priceUsd,
+                changePercent24Hr: changePercent24Hr
             )
         }
     }
