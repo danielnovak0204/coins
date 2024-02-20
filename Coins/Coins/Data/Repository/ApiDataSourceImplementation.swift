@@ -30,4 +30,12 @@ class ApiDataSourceImplementation: ApiDataSource {
             .request()
         return currenciesWrapper.data
     }
+    
+    func getCurrencyDetails(id: String) async throws -> CurrencyDetails {
+        let currencyDetailsWrapper: CurrencyDetailsWrapper = try await requestBuilder
+            .withType(.get)
+            .withUrl("\(Constants.apiBaseUrl)\(Constants.assetsUrlPath)/\(id)")
+            .request()
+        return currencyDetailsWrapper.data
+    }
 }
