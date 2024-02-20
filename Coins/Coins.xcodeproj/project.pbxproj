@@ -11,6 +11,12 @@
 		3803BF132B853AE800DA340D /* CurrencyDetailsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3803BF122B853AE800DA340D /* CurrencyDetailsWrapper.swift */; };
 		3803BF152B85401100DA340D /* CurrencyDetailsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3803BF142B85401100DA340D /* CurrencyDetailsEntity.swift */; };
 		3803BF172B854AE800DA340D /* GetCurrencyDetailsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3803BF162B854AE800DA340D /* GetCurrencyDetailsUseCase.swift */; };
+		3803BF1C2B85615600DA340D /* GetCurrencyDetailsResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 3803BF1B2B85615600DA340D /* GetCurrencyDetailsResponse.json */; };
+		3803BF1E2B85624B00DA340D /* GetCurrencyDetailsErrorResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 3803BF1D2B85624B00DA340D /* GetCurrencyDetailsErrorResponse.json */; };
+		3803BF202B8562A200DA340D /* GetCurrencyDetailsIncorrectResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 3803BF1F2B8562A200DA340D /* GetCurrencyDetailsIncorrectResponse.json */; };
+		3803BF222B85670300DA340D /* GetCurrencyDetailsUseCaseImplementationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3803BF212B85670300DA340D /* GetCurrencyDetailsUseCaseImplementationTests.swift */; };
+		3803BF242B856A0300DA340D /* GetCurrenciesInvalidDataResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 3803BF232B856A0300DA340D /* GetCurrenciesInvalidDataResponse.json */; };
+		3803BF262B856B0200DA340D /* GetCurrencyDetailsInvalidDataResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 3803BF252B856B0200DA340D /* GetCurrencyDetailsInvalidDataResponse.json */; };
 		380A08A72B828F48007828C6 /* OverviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380A08A62B828F48007828C6 /* OverviewViewModel.swift */; };
 		380A08A92B82A589007828C6 /* OverviewViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380A08A82B82A589007828C6 /* OverviewViewModelTests.swift */; };
 		380A08AB2B82AE20007828C6 /* CurrencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380A08AA2B82AE20007828C6 /* CurrencyView.swift */; };
@@ -79,6 +85,12 @@
 		3803BF122B853AE800DA340D /* CurrencyDetailsWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyDetailsWrapper.swift; sourceTree = "<group>"; };
 		3803BF142B85401100DA340D /* CurrencyDetailsEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyDetailsEntity.swift; sourceTree = "<group>"; };
 		3803BF162B854AE800DA340D /* GetCurrencyDetailsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCurrencyDetailsUseCase.swift; sourceTree = "<group>"; };
+		3803BF1B2B85615600DA340D /* GetCurrencyDetailsResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GetCurrencyDetailsResponse.json; sourceTree = "<group>"; };
+		3803BF1D2B85624B00DA340D /* GetCurrencyDetailsErrorResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GetCurrencyDetailsErrorResponse.json; sourceTree = "<group>"; };
+		3803BF1F2B8562A200DA340D /* GetCurrencyDetailsIncorrectResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GetCurrencyDetailsIncorrectResponse.json; sourceTree = "<group>"; };
+		3803BF212B85670300DA340D /* GetCurrencyDetailsUseCaseImplementationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCurrencyDetailsUseCaseImplementationTests.swift; sourceTree = "<group>"; };
+		3803BF232B856A0300DA340D /* GetCurrenciesInvalidDataResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GetCurrenciesInvalidDataResponse.json; sourceTree = "<group>"; };
+		3803BF252B856B0200DA340D /* GetCurrencyDetailsInvalidDataResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GetCurrencyDetailsInvalidDataResponse.json; sourceTree = "<group>"; };
 		380A08A62B828F48007828C6 /* OverviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewModel.swift; sourceTree = "<group>"; };
 		380A08A82B82A589007828C6 /* OverviewViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewModelTests.swift; sourceTree = "<group>"; };
 		380A08AA2B82AE20007828C6 /* CurrencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyView.swift; sourceTree = "<group>"; };
@@ -377,7 +389,12 @@
 			children = (
 				380BFDEF2B8173930066425D /* GetCurrenciesErrorResponse.json */,
 				380BFDF32B8174290066425D /* GetCurrenciesIncorrectResponse.json */,
+				3803BF232B856A0300DA340D /* GetCurrenciesInvalidDataResponse.json */,
 				380BFDED2B8171F60066425D /* GetCurrenciesResponse.json */,
+				3803BF1D2B85624B00DA340D /* GetCurrencyDetailsErrorResponse.json */,
+				3803BF1F2B8562A200DA340D /* GetCurrencyDetailsIncorrectResponse.json */,
+				3803BF252B856B0200DA340D /* GetCurrencyDetailsInvalidDataResponse.json */,
+				3803BF1B2B85615600DA340D /* GetCurrencyDetailsResponse.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -387,6 +404,7 @@
 			children = (
 				380BFDF62B8179120066425D /* ApiDataSourceImplementationTests.swift */,
 				380BFDFA2B817AC60066425D /* GetCurrenciesUseCaseImplementationTests.swift */,
+				3803BF212B85670300DA340D /* GetCurrencyDetailsUseCaseImplementationTests.swift */,
 				380A08A82B82A589007828C6 /* OverviewViewModelTests.swift */,
 				380BFDF82B817A210066425D /* RepositoryImplementationTests.swift */,
 				380BFD9B2B80F2B00066425D /* RequestBuilderImplementationTests.swift */,
@@ -528,8 +546,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				380BFDF42B8174290066425D /* GetCurrenciesIncorrectResponse.json in Resources */,
+				3803BF202B8562A200DA340D /* GetCurrencyDetailsIncorrectResponse.json in Resources */,
 				380BFDEE2B8171F60066425D /* GetCurrenciesResponse.json in Resources */,
+				3803BF262B856B0200DA340D /* GetCurrencyDetailsInvalidDataResponse.json in Resources */,
 				380BFDF02B8173930066425D /* GetCurrenciesErrorResponse.json in Resources */,
+				3803BF1C2B85615600DA340D /* GetCurrencyDetailsResponse.json in Resources */,
+				3803BF1E2B85624B00DA340D /* GetCurrencyDetailsErrorResponse.json in Resources */,
+				3803BF242B856A0300DA340D /* GetCurrenciesInvalidDataResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,6 +611,7 @@
 				380BFDE92B8170330066425D /* MockResolver.swift in Sources */,
 				380A08A92B82A589007828C6 /* OverviewViewModelTests.swift in Sources */,
 				380BFD9C2B80F2B00066425D /* RequestBuilderImplementationTests.swift in Sources */,
+				3803BF222B85670300DA340D /* GetCurrencyDetailsUseCaseImplementationTests.swift in Sources */,
 				380BFDE32B816E830066425D /* MockURLProtocol.swift in Sources */,
 				380BFDF72B8179120066425D /* ApiDataSourceImplementationTests.swift in Sources */,
 				380BFDFB2B817AC60066425D /* GetCurrenciesUseCaseImplementationTests.swift in Sources */,
