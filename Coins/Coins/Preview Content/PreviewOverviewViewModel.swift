@@ -7,7 +7,7 @@
 
 class PreviewOverviewViewModel: OverviewViewModelProtocol {
     var isFailed = false
-    var currencies = [CurrencyEntity]()
+    var currencies = previewCurrencies
     var errorMessage = ""
     var isLoading = false
     

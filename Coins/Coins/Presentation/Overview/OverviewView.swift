@@ -7,18 +7,64 @@
 
 import SwiftUI
 
-struct OverviewView: View {
+struct OverviewView<ViewModel: OverviewViewModelProtocol>: View {
+    @ObservedObject var viewModel: ViewModel
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ZStack {
+            NavigationStack {
+                ZStack {
+                    LinearGradient(
+                        colors: [.appBackgroundCyan, .appBackgroundPurple],
+                        startPoint: .top,
+                        endPoint: .bottom
+                    )
+                    .ignoresSafeArea()
+                    
+                    ScrollView {
+                        ForEach(viewModel.currencies) {
+                            CurrencyView(entity: $0)
+                                .padding(.horizontal, 16)
+                                .padding(.vertical, 8)
+                        }
+                        .opacity(viewModel.isLoading ? 0 : 1)
+                        .animation(.easeInOut(duration: 0.2), value: viewModel.isLoading)
+                    }
+                    .scrollIndicators(.never)
+                    .toolbar {
+                        ToolbarItem(placement: .topBarLeading) {
+                            Text("COINS")
+                                .font(.poppinsBold(size: 32))
+                                .foregroundStyle(.appBlack)
+                        }
+                    }
+                    .toolbarBackground(.appBackgroundCyan, for: .navigationBar)
+                    .alert("Error", isPresented: $viewModel.isFailed) {
+                        Button("Retry") {
+                            fetchCurrencies()
+                        }
+                    } message: {
+                        Text(viewModel.errorMessage)
+                    }
+                    .onAppear {
+                        fetchCurrencies()
+                    }
+                }
+            }
+            
+            if viewModel.isLoading {
+                ProgressView()
+            }
         }
-        .padding()
+    }
+    
+    private func fetchCurrencies() {
+        Task {
+            await viewModel.fetchCurrencies()
+        }
     }
 }
 
 #Preview {
-    OverviewView()
+    OverviewView(viewModel: PreviewOverviewViewModel())
 }
