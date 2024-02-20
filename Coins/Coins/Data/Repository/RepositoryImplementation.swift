@@ -34,4 +34,22 @@ class RepositoryImplementation: Repository {
             )
         }
     }
+    
+    func getCurrencyDetails(id: String) async throws -> CurrencyDetailsEntity {
+        let currencyDetails = try await apiDataSource.getCurrencyDetails(id: id)
+        guard let supply = Double(currencyDetails.supply),
+              let marketCapUsd = Double(currencyDetails.marketCapUsd),
+              let volumeUsd24Hr = Double(currencyDetails.volumeUsd24Hr),
+              let priceUsd = Double(currencyDetails.priceUsd),
+              let changePercent24Hr = Double(currencyDetails.changePercent24Hr) else {
+            throw RepositoryError.mapModel
+        }
+        return CurrencyDetailsEntity(
+            supply: supply,
+            marketCapUsd: marketCapUsd,
+            volumeUsd24Hr: volumeUsd24Hr,
+            priceUsd: priceUsd,
+            changePercent24Hr: changePercent24Hr
+        )
+    }
 }
