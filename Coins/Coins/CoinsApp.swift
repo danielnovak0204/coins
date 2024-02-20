@@ -11,7 +11,11 @@ import SwiftUI
 struct CoinsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            OverviewView(
+                viewModel: OverviewViewModel(
+                    getCurrenciesUseCase: Resolver.shared.resolve(GetCurrenciesUseCase.self)
+                )
+            )
         }
     }
 }
