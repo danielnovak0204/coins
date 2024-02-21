@@ -55,6 +55,8 @@
 		380BFDF72B8179120066425D /* ApiDataSourceImplementationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380BFDF62B8179120066425D /* ApiDataSourceImplementationTests.swift */; };
 		380BFDF92B817A210066425D /* RepositoryImplementationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380BFDF82B817A210066425D /* RepositoryImplementationTests.swift */; };
 		380BFDFB2B817AC60066425D /* GetCurrenciesUseCaseImplementationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380BFDFA2B817AC60066425D /* GetCurrenciesUseCaseImplementationTests.swift */; };
+		38721E922B86401F008F2698 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38721E912B86401F008F2698 /* DetailsViewModel.swift */; };
+		38721E942B864C62008F2698 /* DetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38721E932B864C62008F2698 /* DetailsViewModelTests.swift */; };
 		38E79E3F2B833E53004D00F2 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38E79E2D2B833E52004D00F2 /* Poppins-Regular.ttf */; };
 		38E79E462B833E53004D00F2 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38E79E342B833E53004D00F2 /* Poppins-Bold.ttf */; };
 		38E79E522B836570004D00F2 /* Font+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E79E512B836570004D00F2 /* Font+Extension.swift */; };
@@ -132,6 +134,8 @@
 		380BFDF62B8179120066425D /* ApiDataSourceImplementationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiDataSourceImplementationTests.swift; sourceTree = "<group>"; };
 		380BFDF82B817A210066425D /* RepositoryImplementationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryImplementationTests.swift; sourceTree = "<group>"; };
 		380BFDFA2B817AC60066425D /* GetCurrenciesUseCaseImplementationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCurrenciesUseCaseImplementationTests.swift; sourceTree = "<group>"; };
+		38721E912B86401F008F2698 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
+		38721E932B864C62008F2698 /* DetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModelTests.swift; sourceTree = "<group>"; };
 		38E79E2D2B833E52004D00F2 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		38E79E342B833E53004D00F2 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		38E79E502B8340B2004D00F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -234,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				380BFDB52B80F6260066425D /* Common */,
+				38721E902B863FF5008F2698 /* Details */,
 				380BFDB62B80F62F0066425D /* Overview */,
 			);
 			path = Presentation;
@@ -403,6 +408,7 @@
 			isa = PBXGroup;
 			children = (
 				380BFDF62B8179120066425D /* ApiDataSourceImplementationTests.swift */,
+				38721E932B864C62008F2698 /* DetailsViewModelTests.swift */,
 				380BFDFA2B817AC60066425D /* GetCurrenciesUseCaseImplementationTests.swift */,
 				3803BF212B85670300DA340D /* GetCurrencyDetailsUseCaseImplementationTests.swift */,
 				380A08A82B82A589007828C6 /* OverviewViewModelTests.swift */,
@@ -410,6 +416,14 @@
 				380BFD9B2B80F2B00066425D /* RequestBuilderImplementationTests.swift */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		38721E902B863FF5008F2698 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				38721E912B86401F008F2698 /* DetailsViewModel.swift */,
+			);
+			path = Details;
 			sourceTree = "<group>";
 		};
 		38E79E2B2B833DFF004D00F2 /* Font */ = {
@@ -598,6 +612,7 @@
 				380BFDDC2B816CCA0066425D /* Container+Data.swift in Sources */,
 				380BFD8B2B80F2AF0066425D /* CoinsApp.swift in Sources */,
 				3803BF152B85401100DA340D /* CurrencyDetailsEntity.swift in Sources */,
+				38721E922B86401F008F2698 /* DetailsViewModel.swift in Sources */,
 				380BFDD62B8112960066425D /* RepositoryImplementation.swift in Sources */,
 				380A08A72B828F48007828C6 /* OverviewViewModel.swift in Sources */,
 			);
@@ -610,6 +625,7 @@
 				380BFDF92B817A210066425D /* RepositoryImplementationTests.swift in Sources */,
 				380BFDE92B8170330066425D /* MockResolver.swift in Sources */,
 				380A08A92B82A589007828C6 /* OverviewViewModelTests.swift in Sources */,
+				38721E942B864C62008F2698 /* DetailsViewModelTests.swift in Sources */,
 				380BFD9C2B80F2B00066425D /* RequestBuilderImplementationTests.swift in Sources */,
 				3803BF222B85670300DA340D /* GetCurrencyDetailsUseCaseImplementationTests.swift in Sources */,
 				380BFDE32B816E830066425D /* MockURLProtocol.swift in Sources */,

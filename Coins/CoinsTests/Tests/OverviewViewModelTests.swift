@@ -72,4 +72,11 @@ final class OverviewViewModelTests: XCTestCase {
         await viewModel.fetchCurrencies()
         XCTAssert(!viewModel.errorMessage.isEmpty)
     }
+    
+    func test_Given_Invalid_Data_Response_When_Fetch_Currencies_Then_Error_Message_State_Changes() async throws {
+        MockResponseProvider.provideMockResponse(statusCode: 200, json: "GetCurrenciesInvalidDataResponse")
+        
+        await viewModel.fetchCurrencies()
+        XCTAssert(!viewModel.errorMessage.isEmpty)
+    }
 }

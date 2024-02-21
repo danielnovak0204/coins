@@ -31,7 +31,7 @@ final class RepositoryImplementationTests: XCTestCase {
         }
     }
     
-    func test_Given_Incorrect_Response_When_Get_Currencies_Then_Throws_Map_Model_Error() async throws {
+    func test_Given_Invalid_Data_Response_When_Get_Currencies_Then_Throws_Map_Model_Error() async throws {
         MockResponseProvider.provideMockResponse(statusCode: 200, json: "GetCurrenciesInvalidDataResponse")
         
         do {
@@ -64,7 +64,7 @@ final class RepositoryImplementationTests: XCTestCase {
         }
     }
     
-    func test_Given_Incorrect_Response_When_Get_Currency_Details_Then_Throws_Map_Model_Error() async throws {
+    func test_Given_Invalid_Data_Response_When_Get_Currency_Details_Then_Throws_Map_Model_Error() async throws {
         MockResponseProvider.provideMockResponse(statusCode: 200, json: "GetCurrencyDetailsInvalidDataResponse")
         
         do {

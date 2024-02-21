@@ -29,8 +29,8 @@ final class RequestBuilderImplementationTests: XCTestCase {
             let _: CurrenciesWrapper = try await requestBuilder
                 .withType(.get)
                 .withUrl("")
-                .withHeaderParameter(key: .acceptEncoding, value: "gzip")
-                .withQueryParameter(key: .limit, value: "10")
+                .withHeaderParameters([.acceptEncoding: "gzip"])
+                .withQueryParameters([.limit: "10"])
                 .withTimeout(10)
                 .request()
             XCTAssert(false)
@@ -67,8 +67,8 @@ final class RequestBuilderImplementationTests: XCTestCase {
             let _: CurrenciesWrapper = try await requestBuilder
                 .withType(.get)
                 .withUrl("https://api.coincap.io/v2/assets")
-                .withHeaderParameter(key: .acceptEncoding, value: "gzip")
-                .withQueryParameter(key: .limit, value: "10")
+                .withHeaderParameters([.acceptEncoding: "gzip"])
+                .withQueryParameters([.limit: "10"])
                 .withTimeout(10)
                 .request()
             XCTAssert(false)
