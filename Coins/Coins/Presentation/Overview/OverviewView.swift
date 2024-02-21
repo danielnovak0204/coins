@@ -8,47 +8,52 @@
 import SwiftUI
 
 struct OverviewView<ViewModel: OverviewViewModelProtocol>: View {
-    @ObservedObject var viewModel: ViewModel
+    @ObservedObject private(set) var viewModel: ViewModel
+    @State private var isProgressVisible = false
     
     var body: some View {
-        ZStack {
-            NavigationStack {
-                ZStack {
-                    BackgroundView()
-                    
-                    ScrollView {
-                        ForEach(viewModel.currencies) {
-                            CurrencyView(entity: $0)
-                                .padding(.horizontal, 16)
-                                .padding(.vertical, 8)
-                        }
-                        .opacity(viewModel.isLoading ? 0 : 1)
-                        .animation(.easeInOut(duration: 0.2), value: viewModel.isLoading)
+        NavigationStack {
+            ZStack {
+                BackgroundView()
+                
+                ScrollView {
+                    ForEach(viewModel.currencies) {
+                        CurrencyView(entity: $0)
+                            .padding(.horizontal, 16)
+                            .padding(.vertical, 8)
                     }
-                    .scrollIndicators(.never)
-                    .toolbar {
-                        ToolbarItem(placement: .topBarLeading) {
-                            Text("COINS")
-                                .font(.poppinsBold(size: 32))
-                                .foregroundStyle(.appBlack)
-                        }
+                    .opacity(isProgressVisible ? 0 : 1)
+                }
+                .scrollIndicators(.never)
+                .toolbar {
+                    ToolbarItem(placement: .topBarLeading) {
+                        Text("COINS")
+                            .font(.poppinsBold(size: 32))
+                            .foregroundStyle(.appBlack)
                     }
-                    .toolbarBackground(.appBackgroundCyan, for: .navigationBar)
-                    .alert("Error", isPresented: $viewModel.isFailed) {
-                        Button("Retry") {
-                            fetchCurrencies()
-                        }
-                    } message: {
-                        Text(viewModel.errorMessage)
-                    }
-                    .onAppear {
+                }
+                .toolbarBackground(.appBackgroundCyan, for: .navigationBar)
+                .alert("Error", isPresented: $viewModel.isFailed) {
+                    Button("Retry") {
                         fetchCurrencies()
+                    }
+                } message: {
+                    Text(viewModel.errorMessage)
+                }
+                .onAppear {
+                    fetchCurrencies()
+                }
+                .onChange(of: viewModel.isLoading) { _, newValue in
+                    withAnimation(.easeInOut(duration: 0.2)) {
+                        isProgressVisible = newValue
                     }
                 }
             }
-            
-            if viewModel.isLoading {
+        }
+        .overlay {
+            if isProgressVisible {
                 ProgressView()
+                    .transition(.opacity)
             }
         }
     }

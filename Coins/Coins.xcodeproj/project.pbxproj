@@ -61,6 +61,8 @@
 		38721E982B865E1A008F2698 /* ChangePercentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38721E972B865E1A008F2698 /* ChangePercentView.swift */; };
 		38721E9A2B8661A7008F2698 /* HeadlineAmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38721E992B8661A7008F2698 /* HeadlineAmountView.swift */; };
 		38721E9C2B866284008F2698 /* AmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38721E9B2B866284008F2698 /* AmountView.swift */; };
+		38721E9E2B868039008F2698 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38721E9D2B868039008F2698 /* DetailsView.swift */; };
+		38721EA02B8680D4008F2698 /* PreviewDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38721E9F2B8680D4008F2698 /* PreviewDetailsViewModel.swift */; };
 		38E79E3F2B833E53004D00F2 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38E79E2D2B833E52004D00F2 /* Poppins-Regular.ttf */; };
 		38E79E462B833E53004D00F2 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38E79E342B833E53004D00F2 /* Poppins-Bold.ttf */; };
 		38E79E522B836570004D00F2 /* Font+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E79E512B836570004D00F2 /* Font+Extension.swift */; };
@@ -144,6 +146,8 @@
 		38721E972B865E1A008F2698 /* ChangePercentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePercentView.swift; sourceTree = "<group>"; };
 		38721E992B8661A7008F2698 /* HeadlineAmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlineAmountView.swift; sourceTree = "<group>"; };
 		38721E9B2B866284008F2698 /* AmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountView.swift; sourceTree = "<group>"; };
+		38721E9D2B868039008F2698 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+		38721E9F2B8680D4008F2698 /* PreviewDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewDetailsViewModel.swift; sourceTree = "<group>"; };
 		38E79E2D2B833E52004D00F2 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		38E79E342B833E53004D00F2 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		38E79E502B8340B2004D00F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -218,6 +222,7 @@
 			children = (
 				380BFD912B80F2B00066425D /* Preview Assets.xcassets */,
 				380A08AC2B82AEA6007828C6 /* PreviewCurrencies.swift */,
+				38721E9F2B8680D4008F2698 /* PreviewDetailsViewModel.swift */,
 				380A08AE2B82AF9E007828C6 /* PreviewOverviewViewModel.swift */,
 			);
 			path = "Preview Content";
@@ -433,6 +438,7 @@
 		38721E902B863FF5008F2698 /* Details */ = {
 			isa = PBXGroup;
 			children = (
+				38721E9D2B868039008F2698 /* DetailsView.swift */,
 				38721E912B86401F008F2698 /* DetailsViewModel.swift */,
 			);
 			path = Details;
@@ -612,6 +618,7 @@
 				380BFDD42B8112070066425D /* Repository.swift in Sources */,
 				380BFDDE2B816CF90066425D /* Container+Domain.swift in Sources */,
 				380BFDC42B8100880066425D /* Currency.swift in Sources */,
+				38721EA02B8680D4008F2698 /* PreviewDetailsViewModel.swift in Sources */,
 				380BFDD02B8108BD0066425D /* ApiDataSourceImplementation.swift in Sources */,
 				380A08AF2B82AF9E007828C6 /* PreviewOverviewViewModel.swift in Sources */,
 				380BFD8D2B80F2AF0066425D /* OverviewView.swift in Sources */,
@@ -625,6 +632,7 @@
 				380BFDE02B816D7D0066425D /* Resolver.swift in Sources */,
 				380A08AD2B82AEA6007828C6 /* PreviewCurrencies.swift in Sources */,
 				380BFDDC2B816CCA0066425D /* Container+Data.swift in Sources */,
+				38721E9E2B868039008F2698 /* DetailsView.swift in Sources */,
 				38721E9A2B8661A7008F2698 /* HeadlineAmountView.swift in Sources */,
 				380BFD8B2B80F2AF0066425D /* CoinsApp.swift in Sources */,
 				3803BF152B85401100DA340D /* CurrencyDetailsEntity.swift in Sources */,
