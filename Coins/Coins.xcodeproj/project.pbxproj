@@ -242,7 +242,6 @@
 		380BFDB52B80F6260066425D /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				38E79E572B83C2B0004D00F2 /* Extension */,
 				38E79E2B2B833DFF004D00F2 /* Font */,
 				380A08B02B82C679007828C6 /* CircleAsyncImage.swift */,
 			);
@@ -348,6 +347,7 @@
 			children = (
 				380BFDC12B80F74D0066425D /* DI */,
 				380BFDC22B80F7540066425D /* Error */,
+				38E79E572B83C2B0004D00F2 /* Extension */,
 			);
 			path = Core;
 			sourceTree = "<group>";

@@ -6,9 +6,10 @@
 //
 
 struct CurrencyDetailsEntity {
-    let supply: Double
-    let marketCapUsd: Double
-    let volumeUsd24Hr: Double
-    let priceUsd: Double
-    let changePercent24Hr: Double
+    let supply: String
+    let marketCapUsd: String
+    let volumeUsd24Hr: String
+    let priceUsd: String
+    let changePercent24Hr: String
+    let isChangePercent24HrNegative: Bool
 }

@@ -29,8 +29,9 @@ class RepositoryImplementation: Repository {
                 iconUrl: Constants.iconUrlPath + currency.symbol.lowercased() + Constants.iconUrlResourceType,
                 name: currency.name.uppercased(),
                 symbol: currency.symbol.uppercased(),
-                priceUsd: priceUsd,
-                changePercent24Hr: changePercent24Hr
+                priceUsd: "$\(priceUsd.asAbbreviatedString)",
+                changePercent24Hr: changePercent24Hr.asPercentString,
+                isChangePercent24HrNegative: changePercent24Hr < 0
             )
         }
     }
@@ -45,11 +46,12 @@ class RepositoryImplementation: Repository {
             throw RepositoryError.mapModel
         }
         return CurrencyDetailsEntity(
-            supply: supply,
-            marketCapUsd: marketCapUsd,
-            volumeUsd24Hr: volumeUsd24Hr,
-            priceUsd: priceUsd,
-            changePercent24Hr: changePercent24Hr
+            supply: supply.asAbbreviatedString,
+            marketCapUsd: "$\(marketCapUsd.asAbbreviatedString)",
+            volumeUsd24Hr: "$\(volumeUsd24Hr.asAbbreviatedString)",
+            priceUsd: "$\(priceUsd.asAbbreviatedString)",
+            changePercent24Hr: changePercent24Hr.asPercentString,
+            isChangePercent24HrNegative: changePercent24Hr < 0
         )
     }
 }
