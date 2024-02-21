@@ -21,7 +21,7 @@ struct CurrencyView: View {
                         .font(.poppinsBold(size: 20))
                         .frame(maxWidth: .infinity, alignment: .leading)
                     
-                    Text(entity.priceUsd)
+                    Text(entity.details.priceUsd)
                         .font(.poppinsBold(size: 16))
                 }
                 .frame(height: 14)
@@ -31,9 +31,9 @@ struct CurrencyView: View {
                         .font(.poppinsRegular(size: 16))
                         .frame(maxWidth: .infinity, alignment: .leading)
                     
-                    Text(entity.changePercent24Hr)
+                    Text(entity.details.changePercent24Hr)
                         .font(.poppinsBold(size: 16))
-                        .foregroundStyle(entity.isChangePercent24HrNegative ? .appRed : .appGreen)
+                        .foregroundStyle(entity.details.isChangePercent24HrNegative ? .appRed : .appGreen)
                 }
                 .frame(height: 11)
                 
