@@ -16,26 +16,13 @@ struct CurrencyView: View {
                 .frame(width: 56)
             
             VStack(spacing: 16) {
-                HStack(spacing: 20) {
-                    Text(entity.name)
-                        .font(.poppinsBold(size: 20))
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                    
-                    Text(entity.details.priceUsd)
-                        .font(.poppinsBold(size: 16))
-                }
-                .frame(height: 14)
+                HeadlineAmountView(title: entity.name, amount: entity.details.priceUsd)
                 
-                HStack(spacing: 20) {
-                    Text(entity.symbol)
-                        .font(.poppinsRegular(size: 16))
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                    
-                    Text(entity.details.changePercent24Hr)
-                        .font(.poppinsBold(size: 16))
-                        .foregroundStyle(entity.details.isChangePercent24HrNegative ? .appRed : .appGreen)
-                }
-                .frame(height: 11)
+                ChangePercentView(
+                    title: entity.symbol,
+                    changePercent: entity.details.changePercent24Hr,
+                    changePercentColor: entity.details.isChangePercent24HrNegative ? .appRed : .appGreen
+                )
                 
                 HStack {
                     Spacer()

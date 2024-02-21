@@ -14,12 +14,7 @@ struct OverviewView<ViewModel: OverviewViewModelProtocol>: View {
         ZStack {
             NavigationStack {
                 ZStack {
-                    LinearGradient(
-                        colors: [.appBackgroundCyan, .appBackgroundPurple],
-                        startPoint: .top,
-                        endPoint: .bottom
-                    )
-                    .ignoresSafeArea()
+                    BackgroundView()
                     
                     ScrollView {
                         ForEach(viewModel.currencies) {
