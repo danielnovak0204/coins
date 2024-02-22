@@ -12,8 +12,11 @@ import XCTest
 @MainActor
 final class DetailsViewModelTests: XCTestCase {
     private let viewModel = DetailsViewModel(
-        currencyId: "ethereum",
-        currencyDetails: CurrencyDetailsEntity(
+        currency: CurrencyEntity(
+            id: "ethereum",
+            symbol: "ETH",
+            iconUrl: "https://assets.coincap.io/assets/icons/eth@2x.png",
+            name: "ETHEREUM",
             supply: "120.16M",
             marketCapUsd: "$348.38B",
             volumeUsd24Hr: "$13.80B",
@@ -21,12 +24,12 @@ final class DetailsViewModelTests: XCTestCase {
             changePercent24Hr: "-0.20%",
             isChangePercent24HrNegative: true
         ),
-        getCurrencyDetailsUseCase: resolveMock(GetCurrencyUseCase.self)
+        getCurrencyUseCase: resolveMock(GetCurrencyUseCase.self)
     )
     private var cancellables = Set<AnyCancellable>()
     
-    func test_Given_Response_When_Fetch_Currency_Details_Then_Loading_State_Changes() async {
-        MockResponseProvider.provideMockResponse(statusCode: 200, json: "GetCurrencyDetailsResponse")
+    func test_Given_Response_When_Fetch_Currency_Then_Loading_State_Changes() async {
+        MockResponseProvider.provideMockResponse(statusCode: 200, json: "GetCurrencyResponse")
         
         var isLoadingTrueCount = 0
         var isLoadingFalseCount = 0
@@ -48,44 +51,44 @@ final class DetailsViewModelTests: XCTestCase {
             }
             .store(in: &cancellables)
         
-        await viewModel.fetchCurrencyDetails()
+        await viewModel.fetchCurrency()
         await fulfillment(of: [expectation], timeout: 1)
     }
     
-    func test_Given_Response_When_Fetch_Currency_Details_Then_Item_State_Changes() async {
-        MockResponseProvider.provideMockResponse(statusCode: 200, json: "GetCurrencyDetailsResponse")
+    func test_Given_Response_When_Fetch_Currency_Then_Item_State_Changes() async {
+        MockResponseProvider.provideMockResponse(statusCode: 200, json: "GetCurrencyResponse")
         
         let expectation = expectation(description: "Item should change")
         
-        viewModel.$currencyDetails
+        viewModel.$currency
             .dropFirst()
             .sink { _ in
                 expectation.fulfill()
             }
             .store(in: &cancellables)
         
-        await viewModel.fetchCurrencyDetails()
+        await viewModel.fetchCurrency()
         await fulfillment(of: [expectation], timeout: 1)
     }
     
-    func test_Given_Error_Response_When_Fetch_Currency_Details_Then_Error_State_Changes() async throws {
-        MockResponseProvider.provideMockResponse(statusCode: 404, json: "GetCurrencyDetailsErrorResponse")
+    func test_Given_Error_Response_When_Fetch_Currency_Then_Error_State_Changes() async throws {
+        MockResponseProvider.provideMockResponse(statusCode: 404, json: "GetCurrencyErrorResponse")
         
-        await viewModel.fetchCurrencyDetails()
+        await viewModel.fetchCurrency()
         XCTAssert(viewModel.isFailed)
     }
     
-    func test_Given_Error_Response_When_Fetch_Currency_Details_Then_Error_Message_State_Changes() async throws {
-        MockResponseProvider.provideMockResponse(statusCode: 404, json: "GetCurrencyDetailsErrorResponse")
+    func test_Given_Error_Response_When_Fetch_Currency_Then_Error_Message_State_Changes() async throws {
+        MockResponseProvider.provideMockResponse(statusCode: 404, json: "GetCurrencyErrorResponse")
         
-        await viewModel.fetchCurrencyDetails()
+        await viewModel.fetchCurrency()
         XCTAssert(!viewModel.errorMessage.isEmpty)
     }
     
-    func test_Given_Invalid_Data_Response_When_Fetch_Currency_Details_Then_Error_Message_State_Changes() async throws {
-        MockResponseProvider.provideMockResponse(statusCode: 200, json: "GetCurrencyDetailsInvalidDataResponse")
+    func test_Given_Invalid_Data_Response_When_Fetch_Currency_Then_Error_Message_State_Changes() async throws {
+        MockResponseProvider.provideMockResponse(statusCode: 200, json: "GetCurrencyInvalidDataResponse")
         
-        await viewModel.fetchCurrencyDetails()
+        await viewModel.fetchCurrency()
         XCTAssert(!viewModel.errorMessage.isEmpty)
     }
 }
