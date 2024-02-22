@@ -3,7 +3,7 @@
 ## Overview
 The purpose of the app is to share information on crypto currencies in the market, so that the user can make informed investment decisions based on up-to-date information.
 
-##Features
+## Features
 - OverviewView with a list of the top ten ranked crypto currencies.
 - DetailsView with detailed information about the selected crypto currency.
 
