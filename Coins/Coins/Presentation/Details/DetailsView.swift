@@ -17,12 +17,12 @@ struct DetailsView<ViewModel: DetailsViewModelProtocol>: View {
             
             VStack(spacing: 32) {
                 VStack(spacing: 24) {
-                    AmountView(title: "Price", amount: viewModel.currencyDetails.priceUsd)
+                    AmountView(title: "Price", amount: viewModel.currency.priceUsd)
                     
                     ChangePercentView(
                         title: "Change (24hr)",
-                        changePercent: viewModel.currencyDetails.changePercent24Hr,
-                        changePercentColor: viewModel.currencyDetails.isChangePercent24HrNegative ? .appRed : .appGreen
+                        changePercent: viewModel.currency.changePercent24Hr,
+                        changePercentColor: viewModel.currency.isChangePercent24HrNegative ? .appRed : .appGreen
                     )
                 }
                 
@@ -31,11 +31,11 @@ struct DetailsView<ViewModel: DetailsViewModelProtocol>: View {
                     .overlay(.appBlue)
                 
                 VStack(spacing: 24) {
-                    AmountView(title: "Market Cap", amount: viewModel.currencyDetails.marketCapUsd)
+                    AmountView(title: "Market Cap", amount: viewModel.currency.marketCapUsd)
                     
-                    AmountView(title: "Volume (24hr)", amount: viewModel.currencyDetails.volumeUsd24Hr)
+                    AmountView(title: "Volume (24hr)", amount: viewModel.currency.volumeUsd24Hr)
                     
-                    AmountView(title: "Supply", amount: viewModel.currencyDetails.supply)
+                    AmountView(title: "Supply", amount: viewModel.currency.supply)
                 }
             }
             .frame(maxHeight: .infinity, alignment: .top)
@@ -76,7 +76,7 @@ struct DetailsView<ViewModel: DetailsViewModelProtocol>: View {
     
     private func fetchCurrencyDetails() {
         Task {
-            await viewModel.fetchCurrencyDetails()
+            await viewModel.fetchCurrency()
         }
     }
 }

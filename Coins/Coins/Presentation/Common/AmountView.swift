@@ -27,6 +27,6 @@ struct AmountView: View {
 #Preview {
     AmountView(
         title: "Volume (24hr)",
-        amount: previewCurrencies.first!.details.volumeUsd24Hr
+        amount: previewCurrencies.first!.volumeUsd24Hr
     )
 }

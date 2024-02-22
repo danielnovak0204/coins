@@ -27,6 +27,6 @@ struct HeadlineAmountView: View {
 #Preview {
     HeadlineAmountView(
         title: previewCurrencies.first!.name,
-        amount: previewCurrencies.first!.details.priceUsd
+        amount: previewCurrencies.first!.priceUsd
     )
 }

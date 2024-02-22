@@ -9,7 +9,7 @@ import XCTest
 @testable import Coins
 
 final class GetCurrencyDetailsUseCaseImplementationTests: XCTestCase {
-    private let getCurrencyDetailsUseCase = resolveMock(GetCurrencyDetailsUseCase.self)
+    private let getCurrencyDetailsUseCase = resolveMock(GetCurrencyUseCase.self)
     
     func test_Given_Response_When_Get_Currency_Details_Then_Returns_Item() async throws {
         MockResponseProvider.provideMockResponse(statusCode: 200, json: "GetCurrencyDetailsResponse")

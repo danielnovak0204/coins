@@ -31,11 +31,11 @@ class ApiDataSourceImplementation: ApiDataSource {
         return currenciesWrapper.data
     }
     
-    func getCurrencyDetails(id: String) async throws -> CurrencyDetails {
-        let currencyDetailsWrapper: CurrencyDetailsWrapper = try await requestBuilder
+    func getCurrency(id: String) async throws -> Currency {
+        let currencyWrapper: CurrencyWrapper = try await requestBuilder
             .withType(.get)
             .withUrl("\(Constants.apiBaseUrl)\(Constants.assetsUrlPath)/\(id)")
             .request()
-        return currencyDetailsWrapper.data
+        return currencyWrapper.data
     }
 }

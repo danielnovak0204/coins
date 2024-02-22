@@ -9,36 +9,30 @@ import Foundation
 
 protocol DetailsViewModelProtocol: ObservableObject {
     nonisolated var isFailed: Bool { get set }
-    nonisolated var currencyDetails: CurrencyDetailsEntity { get }
+    nonisolated var currency: CurrencyEntity { get }
     nonisolated var errorMessage: String { get }
     nonisolated var isLoading: Bool { get }
     
-    func fetchCurrencyDetails() async
+    func fetchCurrency() async
 }
 
 @MainActor
 class DetailsViewModel: DetailsViewModelProtocol {
     @Published var isFailed = false
-    @Published private(set) var currencyDetails: CurrencyDetailsEntity
+    @Published private(set) var currency: CurrencyEntity
     @Published private(set) var errorMessage = ""
     @Published private(set) var isLoading = false
-    private let currencyId: String
-    private let getCurrencyDetailsUseCase: GetCurrencyDetailsUseCase
+    private let getCurrencyUseCase: GetCurrencyUseCase
     
-    init(
-        currencyId: String,
-        currencyDetails: CurrencyDetailsEntity,
-        getCurrencyDetailsUseCase: GetCurrencyDetailsUseCase
-    ) {
-        self.currencyId = currencyId
-        self.currencyDetails = currencyDetails
-        self.getCurrencyDetailsUseCase = getCurrencyDetailsUseCase
+    init(currency: CurrencyEntity, getCurrencyUseCase: GetCurrencyUseCase) {
+        self.currency = currency
+        self.getCurrencyUseCase = getCurrencyUseCase
     }
     
-    func fetchCurrencyDetails() async {
+    func fetchCurrency() async {
         isLoading = true
         do {
-            currencyDetails = try await getCurrencyDetailsUseCase.getCurrencyDetails(id: currencyId)
+            currency = try await getCurrencyUseCase.getCurrency(id: currency.id)
         } catch let error as AppError {
             errorMessage = error.message
             isFailed = true

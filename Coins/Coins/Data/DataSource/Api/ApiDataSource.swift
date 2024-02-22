@@ -7,5 +7,5 @@
 
 protocol ApiDataSource {
     func getCurrencies() async throws -> [Currency]
-    func getCurrencyDetails(id: String) async throws -> CurrencyDetails
+    func getCurrency(id: String) async throws -> Currency
 }

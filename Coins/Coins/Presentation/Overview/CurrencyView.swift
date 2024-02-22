@@ -16,12 +16,12 @@ struct CurrencyView: View {
                 .frame(width: 56)
             
             VStack(spacing: 16) {
-                HeadlineAmountView(title: entity.name, amount: entity.details.priceUsd)
+                HeadlineAmountView(title: entity.name, amount: entity.priceUsd)
                 
                 ChangePercentView(
                     title: entity.symbol,
-                    changePercent: entity.details.changePercent24Hr,
-                    changePercentColor: entity.details.isChangePercent24HrNegative ? .appRed : .appGreen
+                    changePercent: entity.changePercent24Hr,
+                    changePercentColor: entity.isChangePercent24HrNegative ? .appRed : .appGreen
                 )
                 
                 HStack {

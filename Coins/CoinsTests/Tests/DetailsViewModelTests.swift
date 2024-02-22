@@ -21,7 +21,7 @@ final class DetailsViewModelTests: XCTestCase {
             changePercent24Hr: "-0.20%",
             isChangePercent24HrNegative: true
         ),
-        getCurrencyDetailsUseCase: resolveMock(GetCurrencyDetailsUseCase.self)
+        getCurrencyDetailsUseCase: resolveMock(GetCurrencyUseCase.self)
     )
     private var cancellables = Set<AnyCancellable>()
     

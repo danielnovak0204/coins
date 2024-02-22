@@ -29,7 +29,7 @@ struct ChangePercentView: View {
 #Preview {
     ChangePercentView(
         title: previewCurrencies.first!.symbol,
-        changePercent: previewCurrencies.first!.details.changePercent24Hr,
+        changePercent: previewCurrencies.first!.changePercent24Hr,
         changePercentColor: .appRed
     )
 }

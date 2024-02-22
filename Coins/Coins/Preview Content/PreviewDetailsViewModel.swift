@@ -7,11 +7,11 @@
 
 class PreviewDetailsViewModel: DetailsViewModelProtocol {
     var isFailed = false
-    var currencyDetails = previewCurrencies.first!.details
+    var currency = previewCurrencies.first!
     var errorMessage = ""
     var isLoading = false
     
-    func fetchCurrencyDetails() async {
+    func fetchCurrency() async {
         // No action required.
     }
 }
