@@ -45,6 +45,19 @@ struct DetailsView<ViewModel: DetailsViewModelProtocol>: View {
             .overlay(content: progressView)
             .padding(.horizontal, 16)
             .padding(.vertical, 24)
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Text(viewModel.currency.name)
+                        .font(.poppinsBold(size: 32))
+                        .foregroundStyle(.appBlack)
+                        .padding(.leading, 20)
+                }
+                
+                ToolbarItem(placement: .topBarTrailing) {
+                    CircleAsyncImage(url: viewModel.currency.iconUrl)
+                        .frame(height: 40)
+                }
+            }
             .alert("Error", isPresented: $viewModel.isFailed) {
                 Button("Retry") {
                     fetchCurrencyDetails()

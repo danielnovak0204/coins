@@ -17,14 +17,17 @@ struct OverviewView<ViewModel: OverviewViewModelProtocol>: View {
                 BackgroundView()
                 
                 ScrollView {
-                    ForEach(viewModel.currencies) {
-                        CurrencyView(entity: $0)
-                            .padding(.horizontal, 16)
-                            .padding(.vertical, 8)
+                    ForEach(viewModel.currencies) { currency in
+                        NavigationLink(destination: destinationView(using: currency)) {
+                            CurrencyView(entity: currency)
+                                .padding(.horizontal, 16)
+                                .padding(.vertical, 8)
+                        }
                     }
                     .opacity(isProgressVisible ? 0 : 1)
                 }
                 .scrollIndicators(.never)
+                .navigationTitle("")
                 .toolbar {
                     ToolbarItem(placement: .topBarLeading) {
                         Text("COINS")
@@ -50,11 +53,23 @@ struct OverviewView<ViewModel: OverviewViewModelProtocol>: View {
                 }
             }
         }
-        .overlay {
-            if isProgressVisible {
-                ProgressView()
-                    .transition(.opacity)
-            }
+        .overlay(content: progressView)
+    }
+    
+    private func destinationView(using currency: CurrencyEntity) -> some View {
+        DetailsView(
+            viewModel: DetailsViewModel(
+                currency: currency,
+                getCurrencyUseCase: Resolver.shared.resolve(GetCurrencyUseCase.self)
+            )
+        )
+    }
+    
+    @ViewBuilder
+    private func progressView() -> some View {
+        if isProgressVisible {
+            ProgressView()
+                .transition(.opacity)
         }
     }
     

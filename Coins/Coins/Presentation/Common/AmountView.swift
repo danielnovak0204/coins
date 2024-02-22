@@ -20,6 +20,7 @@ struct AmountView: View {
             Text(amount)
                 .font(.poppinsBold(size: 16))
         }
+        .foregroundStyle(.appBlack)
         .frame(height: 14)
     }
 }

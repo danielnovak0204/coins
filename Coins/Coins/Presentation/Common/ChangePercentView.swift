@@ -16,6 +16,7 @@ struct ChangePercentView: View {
         HStack(spacing: 20) {
             Text(title)
                 .font(.poppinsRegular(size: 16))
+                .foregroundStyle(.appBlack)
                 .frame(maxWidth: .infinity, alignment: .leading)
             
             Text(changePercent)
