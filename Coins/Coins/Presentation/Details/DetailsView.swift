@@ -7,6 +7,16 @@
 
 import SwiftUI
 
+private enum Constants {
+    static let priceTitle = "Price"
+    static let change24HrTitle = "Change (24hr)"
+    static let marketCapTitle = "Market Cap"
+    static let volume24HrTitle = "Volume (24hr)"
+    static let supplyTitle = "Supply"
+    static let errorTitle = "Error"
+    static let retryTitle = "Retry"
+}
+
 struct DetailsView<ViewModel: DetailsViewModelProtocol>: View {
     @ObservedObject private(set) var viewModel: ViewModel
     @State private var isProgressVisible = false
@@ -17,10 +27,10 @@ struct DetailsView<ViewModel: DetailsViewModelProtocol>: View {
             
             VStack(spacing: 32) {
                 VStack(spacing: 24) {
-                    AmountView(title: "Price", amount: viewModel.currency.priceUsd)
+                    AmountView(title: Constants.priceTitle, amount: viewModel.currency.priceUsd)
                     
                     ChangePercentView(
-                        title: "Change (24hr)",
+                        title: Constants.change24HrTitle,
                         changePercent: viewModel.currency.changePercent24Hr,
                         changePercentColor: viewModel.currency.isChangePercent24HrNegative ? .appRed : .appGreen
                     )
@@ -31,11 +41,11 @@ struct DetailsView<ViewModel: DetailsViewModelProtocol>: View {
                     .overlay(.appBlue)
                 
                 VStack(spacing: 24) {
-                    AmountView(title: "Market Cap", amount: viewModel.currency.marketCapUsd)
+                    AmountView(title: Constants.marketCapTitle, amount: viewModel.currency.marketCapUsd)
                     
-                    AmountView(title: "Volume (24hr)", amount: viewModel.currency.volumeUsd24Hr)
+                    AmountView(title: Constants.volume24HrTitle, amount: viewModel.currency.volumeUsd24Hr)
                     
-                    AmountView(title: "Supply", amount: viewModel.currency.supply)
+                    AmountView(title: Constants.supplyTitle, amount: viewModel.currency.supply)
                 }
             }
             .frame(maxHeight: .infinity, alignment: .top)
@@ -58,8 +68,8 @@ struct DetailsView<ViewModel: DetailsViewModelProtocol>: View {
                         .frame(height: 40)
                 }
             }
-            .alert("Error", isPresented: $viewModel.isFailed) {
-                Button("Retry") {
+            .alert(Constants.errorTitle, isPresented: $viewModel.isFailed) {
+                Button(Constants.retryTitle) {
                     fetchCurrencyDetails()
                 }
             } message: {

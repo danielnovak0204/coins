@@ -7,6 +7,12 @@
 
 import SwiftUI
 
+private enum Constants {
+    static let coinsTitle = "COINS"
+    static let errorTitle = "Error"
+    static let retryTitle = "Retry"
+}
+
 struct OverviewView<ViewModel: OverviewViewModelProtocol>: View {
     @ObservedObject private(set) var viewModel: ViewModel
     @State private var isProgressVisible = false
@@ -30,14 +36,14 @@ struct OverviewView<ViewModel: OverviewViewModelProtocol>: View {
                 .navigationTitle("")
                 .toolbar {
                     ToolbarItem(placement: .topBarLeading) {
-                        Text("COINS")
+                        Text(Constants.coinsTitle)
                             .font(.poppinsBold(size: 32))
                             .foregroundStyle(.appBlack)
                     }
                 }
                 .toolbarBackground(.appBackgroundCyan, for: .navigationBar)
-                .alert("Error", isPresented: $viewModel.isFailed) {
-                    Button("Retry") {
+                .alert(Constants.errorTitle, isPresented: $viewModel.isFailed) {
+                    Button(Constants.retryTitle) {
                         fetchCurrencies()
                     }
                 } message: {
