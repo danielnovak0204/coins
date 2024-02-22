@@ -7,9 +7,13 @@
 
 struct CurrencyEntity: Identifiable {
     let id: String
+    let symbol: String
     let iconUrl: String
     let name: String
-    let symbol: String
-    let priceUsd: Double
-    let changePercent24Hr: Double
+    let supply: String
+    let marketCapUsd: String
+    let volumeUsd24Hr: String
+    let priceUsd: String
+    let changePercent24Hr: String
+    let isChangePercent24HrNegative: Bool
 }

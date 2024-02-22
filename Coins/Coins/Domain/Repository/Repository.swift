@@ -7,4 +7,5 @@
 
 protocol Repository {
     func getCurrencies() async throws -> [CurrencyEntity]
+    func getCurrency(id: String) async throws -> CurrencyEntity
 }

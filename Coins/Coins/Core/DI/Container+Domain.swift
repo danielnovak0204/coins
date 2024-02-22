@@ -13,6 +13,9 @@ extension Container {
         register(GetCurrenciesUseCase.self) {
             GetCurrenciesUseCaseImplementation(repository: $0.resolve(Repository.self)!)
         }
+        register(GetCurrencyUseCase.self) {
+            GetCurrencyUseCaseImplementation(repository: $0.resolve(Repository.self)!)
+        }
         return self
     }
 }

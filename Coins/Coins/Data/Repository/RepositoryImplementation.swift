@@ -19,19 +19,35 @@ class RepositoryImplementation: Repository {
     
     func getCurrencies() async throws -> [CurrencyEntity] {
         let currencies = try await apiDataSource.getCurrencies()
-        return try currencies.map { currency in
-            guard let priceUsd = Double(currency.priceUsd),
-                  let changePercent24Hr = Double(currency.changePercent24Hr) else {
-                throw RepositoryError.mapModel
-            }
-            return CurrencyEntity(
-                id: currency.id,
-                iconUrl: Constants.iconUrlPath + currency.symbol.lowercased() + Constants.iconUrlResourceType,
-                name: currency.name.uppercased(),
-                symbol: currency.symbol.uppercased(),
-                priceUsd: priceUsd,
-                changePercent24Hr: changePercent24Hr
-            )
+        return try currencies.map {
+            try map(currency: $0)
         }
+    }
+    
+    func getCurrency(id: String) async throws -> CurrencyEntity {
+        let currency = try await apiDataSource.getCurrency(id: id)
+        return try map(currency: currency)
+    }
+    
+    private func map(currency: Currency) throws -> CurrencyEntity {
+        guard let supply = Double(currency.supply),
+              let marketCapUsd = Double(currency.marketCapUsd),
+              let volumeUsd24Hr = Double(currency.volumeUsd24Hr),
+              let priceUsd = Double(currency.priceUsd),
+              let changePercent24Hr = Double(currency.changePercent24Hr) else {
+            throw RepositoryError.mapModel
+        }
+        return CurrencyEntity(
+            id: currency.id,
+            symbol: currency.symbol.uppercased(),
+            iconUrl: Constants.iconUrlPath + currency.symbol.lowercased() + Constants.iconUrlResourceType,
+            name: currency.name.uppercased(),
+            supply: supply.asAbbreviatedString,
+            marketCapUsd: "$\(marketCapUsd.asAbbreviatedString)",
+            volumeUsd24Hr: "$\(volumeUsd24Hr.asAbbreviatedString)",
+            priceUsd: "$\(priceUsd.asAbbreviatedString)",
+            changePercent24Hr: changePercent24Hr.asPercentString,
+            isChangePercent24HrNegative: changePercent24Hr < 0
+        )
     }
 }
