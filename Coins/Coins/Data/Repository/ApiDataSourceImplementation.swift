@@ -7,7 +7,8 @@
 
 class ApiDataSourceImplementation: ApiDataSource {
     private enum Constants {
-        static let apiBaseUrl = "https://api.coincap.io/v2"
+        static let apiBaseUrl = "https://rest.coincap.io/v3"
+        static let bearer = "Bearer token"
         static let assetsUrlPath = "/assets"
         static let limitQueryParameterValue = "10"
         static let acceptEncodingHeaderParameterValue = "gzip"
@@ -19,6 +20,7 @@ class ApiDataSourceImplementation: ApiDataSource {
     init(requestBuilder: RequestBuilder) {
         self.requestBuilder = requestBuilder
             .withHeaderParameter(key: .acceptEncoding, value: Constants.acceptEncodingHeaderParameterValue)
+            .withHeaderParameter(key: .authorization, value: Constants.bearer)
             .withTimeout(Constants.requestTimeout)
     }
     
