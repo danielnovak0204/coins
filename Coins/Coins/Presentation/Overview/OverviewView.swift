@@ -32,6 +32,9 @@ struct OverviewView<ViewModel: OverviewViewModelProtocol>: View {
                     }
                     .opacity(isProgressVisible ? 0 : 1)
                 }
+                .refreshable {
+                  fetchCurrencies()
+                }
                 .scrollIndicators(.never)
                 .navigationTitle("")
                 .toolbar {

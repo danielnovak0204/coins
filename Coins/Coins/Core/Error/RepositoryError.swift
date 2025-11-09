@@ -16,7 +16,7 @@ extension RepositoryError {
     
     var message: String {
         switch self {
-        case .mapModel: return Constants.mapModelErrorMessage
+        case .mapModel: Constants.mapModelErrorMessage
         }
     }
 }

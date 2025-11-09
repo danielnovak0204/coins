@@ -24,11 +24,11 @@ extension ApiError {
     
     var message: String {
         switch self {
-        case .configuration: return Constants.configurationErrorMessage
-        case .decoding: return Constants.decodingErrorMessage
-        case .noConnection: return Constants.noConnectionErrorMessage
-        case .request: return Constants.requestErrorMessage
-        case .unknown: return Constants.unknownErrorMessage
+        case .configuration: Constants.configurationErrorMessage
+        case .decoding: Constants.decodingErrorMessage
+        case .noConnection: Constants.noConnectionErrorMessage
+        case .request: Constants.requestErrorMessage
+        case .unknown: Constants.unknownErrorMessage
         }
     }
 }

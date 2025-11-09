@@ -26,4 +26,5 @@ enum QueryKey: String {
 
 enum HeaderKey: String {
     case acceptEncoding = "Accept-Encoding"
+    case authorization = "Authorization"
 }

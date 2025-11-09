@@ -30,11 +30,13 @@ class RepositoryImplementation: Repository {
     }
     
     private func map(currency: Currency) throws -> CurrencyEntity {
-        guard let supply = Double(currency.supply),
-              let marketCapUsd = Double(currency.marketCapUsd),
-              let volumeUsd24Hr = Double(currency.volumeUsd24Hr),
-              let priceUsd = Double(currency.priceUsd),
-              let changePercent24Hr = Double(currency.changePercent24Hr) else {
+        guard
+            let supply = Double(currency.supply),
+            let marketCapUsd = Double(currency.marketCapUsd),
+            let volumeUsd24Hr = Double(currency.volumeUsd24Hr),
+            let priceUsd = Double(currency.priceUsd),
+            let changePercent24Hr = Double(currency.changePercent24Hr)
+        else {
             throw RepositoryError.mapModel
         }
         return CurrencyEntity(
