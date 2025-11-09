@@ -5,6 +5,7 @@
 //  Created by Dániel Novák on 17/02/2024.
 //
 
+@MainActor
 final class Resolver {
     static let shared = Resolver()
     private var container: Container!

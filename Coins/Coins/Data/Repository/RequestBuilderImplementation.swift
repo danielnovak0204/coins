@@ -94,13 +94,13 @@ class RequestBuilderImplementation: RequestBuilder {
 private extension Error {
     var asApiError: ApiError {
         if let apiError = self as? ApiError {
-            return apiError
+            apiError
         } else if self is DecodingError {
-            return ApiError.decoding
+            ApiError.decoding
         } else if self.isNoConnection {
-            return ApiError.noConnection
+            ApiError.noConnection
         } else {
-            return ApiError.unknown
+            ApiError.unknown
         }
     }
     

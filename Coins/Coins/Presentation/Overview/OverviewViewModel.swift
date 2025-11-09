@@ -7,11 +7,12 @@
 
 import Foundation
 
+@MainActor
 protocol OverviewViewModelProtocol: ObservableObject {
-    nonisolated var isFailed: Bool { get set }
-    nonisolated var currencies: [CurrencyEntity] { get }
-    nonisolated var errorMessage: String { get }
-    nonisolated var isLoading: Bool { get }
+    var isFailed: Bool { get set }
+    var currencies: [CurrencyEntity] { get }
+    var errorMessage: String { get }
+    var isLoading: Bool { get }
     
     func fetchCurrencies() async
 }
@@ -30,8 +31,14 @@ class OverviewViewModel: OverviewViewModelProtocol {
     
     func fetchCurrencies() async {
         isLoading = true
+        isFailed = false
+        errorMessage = ""
+        
+        let useCase = getCurrenciesUseCase
         do {
-            currencies = try await getCurrenciesUseCase.getCurrencies()
+            currencies = try await Task {
+                try await useCase.getCurrencies()
+            }.value
         } catch let error as AppError {
             errorMessage = error.message
             isFailed = true
